@@ -1,4 +1,5 @@
 ﻿using IronPython.Hosting;
+using Microsoft.Scripting;
 
 namespace scripting_engine
 {
@@ -8,7 +9,7 @@ namespace scripting_engine
         {
             var engine = Python.CreateEngine();
             var scope = engine?.CreateScope();
-            var source = engine?.CreateScriptSourceFromString(script);
+            var source = engine?.CreateScriptSourceFromString(script, SourceCodeKind.Statements);
             var compiled = source?.Compile();
             try
             {
@@ -17,6 +18,11 @@ namespace scripting_engine
             }
             catch (OperationCanceledException ocx)
             {
+                return false;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception caught.");
                 return false;
             }
         }

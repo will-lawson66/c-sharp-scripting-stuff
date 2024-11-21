@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\scripting-engine\scripting-engine.csproj" />
+  </ItemGroup>
+
 </Project>

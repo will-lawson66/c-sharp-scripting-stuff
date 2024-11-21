@@ -1,0 +1,4 @@
+import clr
+clr.AddReference("mscorlib")
+import System
+System.Console.WriteLine("Hello from IronPython!")

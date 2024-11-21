@@ -14,6 +14,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{7275E6E1-9839-435A-ACB3-B57EADDDD64F}"
+	ProjectSection(SolutionItems) = preProject
+		script_console_basic.txt = script_console_basic.txt
+		script_message_box.txt = script_message_box.txt
+	EndProjectSection
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "scripting-iron-python", "scripting-iron-python\scripting-iron-python.pyproj", "{0965E487-AA38-4022-9C02-7B93521AD933}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +36,8 @@ Global
 		{33C19844-64FC-4C81-B8CB-C7FBC568C400}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33C19844-64FC-4C81-B8CB-C7FBC568C400}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33C19844-64FC-4C81-B8CB-C7FBC568C400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0965E487-AA38-4022-9C02-7B93521AD933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0965E487-AA38-4022-9C02-7B93521AD933}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
