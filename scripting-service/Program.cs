@@ -1,9 +1,19 @@
 ﻿
+using Microsoft.Extensions.Configuration;
+using Microsoft.Scripting.Utils;
 using scripting_engine;
 
+var configuration = new ConfigurationBuilder()
+    .AddInMemoryCollection(new Dictionary<string, string?>()
+    {
+        ["ScriptFilePath"] = @"C:\Users\WLawson\source\repos\Bill\.NET\c-sharp-scripting-stuff\script_console_basic.txt"
+    })
+    .Build();
+
+Assert.NotNull(configuration);
 Console.WriteLine("Starting scripting service.");
 
-var script = "import clr\r\nclr.AddReference(\"mscorlib\")\r\nimport System\r\nSystem.Console.WriteLine(\"Hello from IronPython!\")";
+var script = ScriptHelpers.LoadScript(configuration["ScriptFilePath"]);
 
 var engine = new ScriptEngine(new ScriptInterpreter());
 

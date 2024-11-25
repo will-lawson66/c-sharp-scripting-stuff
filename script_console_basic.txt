@@ -1,4 +1,35 @@
+import sys
 import clr
-clr.AddReference("mscorlib")
+import os
 import System
-System.Console.WriteLine("Hello from IronPython!")
+os.chdir('../../../../')
+print(sys.path)
+print(System.Environment.CurrentDirectory)
+clr.AddReference('mscorlib')
+print(clr.References)
+System.Console.WriteLine(System.Environment.CurrentDirectory)
+d = os.listdir()
+for entry in d:
+	print(entry)
+	System.Console.WriteLine(entry)
+clr.AddReferenceToFileAndPath('C:/Users/WLawson/source/repos/Bill/IronPython/AssemblyNamespaceResolution/Net462Assembly/bin/Debug/Net462Assembly.dll')
+print(clr.References)
+print(sys.path)
+
+clr.AddReferenceToFileAndPath('C:/Users/WLawson/source/repos/Bill/.NET/c-sharp-scripting-stuff/Net6AssemblyStub/bin/Debug/net6.0/Net6AssemblyStub.dll')
+print(clr.References)
+from Net462Assembly import DoSomething
+m = DoSomething()
+m.Do(".NET Framework 462 assembly")
+cr = System.Console.WriteLine("\r\n")
+
+from Net6AssemblyStub import DoSomething
+p = DoSomething()
+print(p.Do())
+
+clr.AddReferenceToFileAndPath('C:/Users/WLawson/source/repos/Bill/IronPython/AssemblyNamespaceResolution/AssemblyNameResolution/bin/Debug/net6.0/AssemblyNameResolution.dll')
+print(clr.References)
+from AssemblyNameResolution import DoSomething
+k = DoSomething()
+k.Do(".NET 6 assembly")
+
