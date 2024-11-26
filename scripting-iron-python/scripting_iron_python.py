@@ -1,3 +1,3 @@
-class test:
-    def something:
-        import clr
+import sys, os, clr
+import System
+

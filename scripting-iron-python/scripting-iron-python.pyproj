@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>scripting-iron-python</Name>
     <RootNamespace>scripting-iron-python</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +23,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="scripting_iron_python.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.4</Version>
+      <Description>env (IronPython 3.4 (64-bit))</Description>
+      <InterpreterPath>Scripts\ipy.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\ipy.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>IRONPYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

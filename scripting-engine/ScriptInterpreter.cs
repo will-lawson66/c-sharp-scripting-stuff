@@ -1,4 +1,5 @@
 ﻿using IronPython.Hosting;
+using IronPython.Modules;
 using Microsoft.Scripting;
 
 namespace scripting_engine
@@ -13,7 +14,9 @@ namespace scripting_engine
             var compiled = source?.Compile();
             try
             {
-                _ = compiled?.Execute();
+                if (scope is null)
+                    return false;
+                _ = compiled?.Execute(scope);
                 return true;
             }
             catch (OperationCanceledException ocx)
