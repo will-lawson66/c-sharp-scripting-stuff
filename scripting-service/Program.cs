@@ -6,7 +6,7 @@ using scripting_engine;
 var configuration = new ConfigurationBuilder()
     .AddInMemoryCollection(new Dictionary<string, string?>()
     {
-        ["ScriptFilePath"] = @"C:\Users\WLawson\source\repos\Bill\.NET\c-sharp-scripting-stuff\script_console_basic.txt"
+        ["ScriptFilePath"] = @"..\..\..\..\script_console_basic.txt"
     })
     .Build();
 

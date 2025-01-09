@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "scripting-engine", "scripting-engine\scripting-engine.csproj", "{0D22EE4D-564B-4340-A395-BA9D14508BA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "scripting-service", "scripting-service\scripting-service.csproj", "{33C19844-64FC-4C81-B8CB-C7FBC568C400}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "scripting-service", "scripting-service\scripting-service.csproj", "{33C19844-64FC-4C81-B8CB-C7FBC568C400}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{2691D486-8CCF-410B-B6D1-1A319E7B0723}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,7 +22,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{7275
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "scripting-iron-python", "scripting-iron-python\scripting-iron-python.pyproj", "{0965E487-AA38-4022-9C02-7B93521AD933}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net6AssemblyStub", "Net6AssemblyStub\Net6AssemblyStub.csproj", "{5D9F2CEF-91C1-4755-ABFB-55A22EDF3946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net6Assembly", "Net6AssemblyStub\Net6Assembly.csproj", "{5D9F2CEF-91C1-4755-ABFB-55A22EDF3946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net462Assembly", "Net462Assembly\Net462Assembly.csproj", "{097942DA-F1DD-4EFB-A981-867A8C035A4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{5D9F2CEF-91C1-4755-ABFB-55A22EDF3946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D9F2CEF-91C1-4755-ABFB-55A22EDF3946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D9F2CEF-91C1-4755-ABFB-55A22EDF3946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{097942DA-F1DD-4EFB-A981-867A8C035A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{097942DA-F1DD-4EFB-A981-867A8C035A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{097942DA-F1DD-4EFB-A981-867A8C035A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{097942DA-F1DD-4EFB-A981-867A8C035A4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

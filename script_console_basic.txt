@@ -12,24 +12,21 @@ d = os.listdir()
 for entry in d:
 	print(entry)
 	System.Console.WriteLine(entry)
-clr.AddReferenceToFileAndPath('C:/Users/WLawson/source/repos/Bill/IronPython/AssemblyNamespaceResolution/Net462Assembly/bin/Debug/Net462Assembly.dll')
+
+clr.AddReferenceToFileAndPath(os.path.join(os.getcwd(), 'Net462Assembly/bin/Debug/Net462Assembly.dll'))
 print(clr.References)
 print(sys.path)
 
-clr.AddReferenceToFileAndPath('C:/Users/WLawson/source/repos/Bill/.NET/c-sharp-scripting-stuff/Net6AssemblyStub/bin/Debug/net6.0/Net6AssemblyStub.dll')
+clr.AddReferenceToFileAndPath(os.path.join(os.getcwd(), 'Net6AssemblyStub/bin/Debug/net6.0/Net6AssemblyStub.dll'))
 print(clr.References)
-from Net462Assembly import DoSomething
-m = DoSomething()
-m.Do(".NET Framework 462 assembly")
+
+from Net462Assembly import DoSomething as Do462
+m = Do462()
+print(m.Do())
 cr = System.Console.WriteLine("\r\n")
 
-from Net6AssemblyStub import DoSomething
-p = DoSomething()
+from Net6AssemblyStub import DoSomething as Do6
+p = Do6()
 print(p.Do())
 
-clr.AddReferenceToFileAndPath('C:/Users/WLawson/source/repos/Bill/IronPython/AssemblyNamespaceResolution/AssemblyNameResolution/bin/Debug/net6.0/AssemblyNameResolution.dll')
-print(clr.References)
-from AssemblyNameResolution import DoSomething
-k = DoSomething()
-k.Do(".NET 6 assembly")
 

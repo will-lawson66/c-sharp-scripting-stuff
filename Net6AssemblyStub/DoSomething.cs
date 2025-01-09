@@ -1,8 +1,8 @@
 ﻿
-namespace Net6AssemblyStub
+namespace Net6Assembly
 {
-    public class DoSomething
+    public class DoSomething : IDoSomething
     {
-        public string Do() => "AbCdEfG";
+        public string Do() => ".NET 6 assembly";
     }
 }
