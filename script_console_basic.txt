@@ -17,16 +17,20 @@ clr.AddReferenceToFileAndPath(os.path.join(os.getcwd(), 'Net462Assembly/bin/Debu
 print(clr.References)
 print(sys.path)
 
-clr.AddReferenceToFileAndPath(os.path.join(os.getcwd(), 'Net6AssemblyStub/bin/Debug/net6.0/Net6AssemblyStub.dll'))
+clr.AddReferenceToFileAndPath(os.path.join(os.getcwd(), 'Net6Assembly/bin/Debug/net6.0/Net6Assembly.dll'))
+print(clr.References)
+
+clr.AddReferenceToFileAndPath(os.path.join(os.getcwd(), 'Net8Assembly/bin/Debug/net8.0/Net8Assembly.dll'))
 print(clr.References)
 
 from Net462Assembly import DoSomething as Do462
 m = Do462()
 print(m.Do())
-cr = System.Console.WriteLine("\r\n")
 
-from Net6AssemblyStub import DoSomething as Do6
+from Net6Assembly import DoSomething as Do6
 p = Do6()
 print(p.Do())
 
+from Net8Assembly import DoSomething as Do8
+print(Do8.Do())
 
