@@ -17,7 +17,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{7275E6E1-9839-435A-ACB3-B57EADDDD64F}"
 	ProjectSection(SolutionItems) = preProject
 		script_console_basic.txt = script_console_basic.txt
-		script_message_box.txt = script_message_box.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net462Assembly", "Net462Assembly\Net462Assembly.csproj", "{097942DA-F1DD-4EFB-A981-867A8C035A4B}"
