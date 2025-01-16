@@ -25,7 +25,7 @@ namespace scripting_engine
             }
             catch (Exception e)
             {
-                Console.WriteLine("Exception caught.");
+                Console.WriteLine("Exception caught. " + e.Message);
                 return false;
             }
         }
